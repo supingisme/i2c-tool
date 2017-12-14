@@ -1,5 +1,6 @@
-CC      ?= gcc
-CFLAGS  ?= -std=c99 -pedantic -Wall
+CROSS_COMPILE := arm-linux-gnueabihf-
+CC := $(CROSS_COMPILE)gcc
+CFLAGS  ?= -std=c99 -pedantic -Wall -static
 LDFLAGS ?=
 
 OBJ = main.o
